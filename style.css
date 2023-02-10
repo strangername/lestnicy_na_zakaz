@@ -1,0 +1,958 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Шрифты */
+html,
+body {
+  background-color: #fff;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.logo {
+  align-items: flex-start;
+  width: 155px;
+  height: 25px;
+  margin-bottom: auto;
+  margin-left: 3px;
+}
+
+/* ============== Стили для меню ============ */
+.conteiner_nav {
+  position: fixed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(23, 26, 41)), to(rgb(23, 26, 41)));
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.conteiner_nav .navbar-brand {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.conteiner_nav a {
+  color: #fff;
+}
+
+.nav_button {
+  background-color: #fff;
+}
+
+.nav-item .nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-brand {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #fff;
+}
+
+nav .phone {
+  color: #fff;
+}
+
+nav .nav_icon {
+  display: flex;
+  flex: 0 0 40px;
+  margin: 2.5px;
+}
+
+nav {
+  justify-content: flex-end;
+}
+
+.container-xxl {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.expander {
+  margin-left: auto;
+}
+
+.stil-t_2 {
+  width: 180px;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.navbar-nav {
+  overflow: auto;
+}
+
+.request_a_call {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: 2px solid #ff9900;
+  width: 200px;
+}
+
+.icon:nth-child(1) {
+  margin-left: auto;
+}
+
+.carousel-control-prev-icon {
+  background-color: #ff9900;
+  opacity: 1;
+}
+
+.carousel-control-next-icon {
+  background-color: #ff9900;
+  opacity: 1;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-size: 60% 100%;
+  z-index: 99;
+}
+
+/* ============== Стили для шапки ============ */
+header {
+  display: flex;
+  text-align: center;
+  flex-wrap: nowrap;
+  padding: 120px 10px;
+}
+
+header .header_conteiner {
+  align-items: center;
+}
+
+header .carousel-indicators li img {
+  border-radius: 10px;
+}
+
+header .carousel-indicators li::before, header .carousel-indicators li::after {
+  display: none;
+}
+
+header .carousel-indicators .active img {
+  border: 4px solid #ff9900;
+  border-radius: 10px;
+}
+
+header .carousel-indicators li {
+  width: 50px;
+}
+
+header .carousel-indicators li {
+  background-color: transparent;
+}
+
+header .header_title h1 {
+  padding-left: 10px;
+  font-size: 33px;
+  font-weight: 700;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+.header_price {
+  order: 3;
+  flex: 1 1 1fr;
+  margin-bottom: 50px;
+  padding: 0 10px;
+}
+
+.header_price h6 {
+  color: rgb(73, 72, 72);
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.header_price .price_without_discount {
+  text-decoration: line-through;
+  color: rgb(106, 106, 106);
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.header_price .discount_price {
+  color: rgb(54, 54, 54);
+  border-bottom: 4px solid #ff9900;
+}
+
+.header_price .discount_valid_until {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(54, 54, 54);
+  margin: 20px 0;
+  padding-bottom: 20px;
+}
+
+.header_price a {
+  color: #fff;
+}
+
+.header_price .button_calculate_the_cost {
+  background-color: #2a7fff;
+  padding: 10px 5px;
+  max-width: 350px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.header_price .button_call_the_measurer {
+  background-color: #197d19;
+  padding: 10px 5px;
+  max-width: 350px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.header_title {
+  margin-top: 10px;
+  order: 1;
+  flex: 1 1 1fr;
+}
+
+.header_img {
+  order: 2;
+  position: relative;
+  flex: 1 1 1fr;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.order_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #197d19;
+  width: 180px;
+  height: 30px;
+  z-index: 9;
+  font-size: 15px;
+  height: 900;
+  color: #fff;
+  right: 10px;
+}
+
+.order_more:hover {
+  text-decoration: none;
+  color: #111;
+}
+
+/* @font-face {
+	font-family: 'Raleway-Bold'; 
+    src: url("../famile/Raleway-Bold.woff2"); 
+} */
+/* @font-face {
+	font-family: 'Roboto Condensed',Arial,sans-serif;
+
+} */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: rgba(0, 0, 0, 0);
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: rgba(0, 0, 0, 0);
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html, body {
+  background-color: #fff;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.logo {
+  align-items: flex-start;
+  width: 155px;
+  height: 25px;
+  margin-bottom: auto;
+  margin-left: 3px;
+}
+
+.conteiner_nav {
+  position: fixed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(23, 26, 41)), to(rgb(23, 26, 41)));
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.conteiner_nav .navbar-brand {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.conteiner_nav a {
+  color: #fff;
+}
+
+.nav_button {
+  background-color: #fff;
+}
+
+.nav-item .nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-brand {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #fff;
+}
+
+nav .phone {
+  color: #fff;
+}
+
+nav .nav_icon {
+  display: flex;
+  flex: 0 0 40px;
+  margin: 2.5px;
+}
+
+nav {
+  justify-content: flex-end;
+}
+
+.container-xxl {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.expander {
+  margin-left: auto;
+}
+
+.stil-t_2 {
+  width: 180px;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.navbar-nav {
+  overflow: auto;
+}
+
+.request_a_call {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: 2px solid #f90;
+  width: 200px;
+}
+
+.icon:nth-child(1) {
+  margin-left: auto;
+}
+
+.carousel-control-prev-icon {
+  background-color: #f90;
+  opacity: 1;
+}
+
+.carousel-control-next-icon {
+  background-color: #f90;
+  opacity: 1;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-size: 60% 100%;
+  z-index: 99;
+}
+
+header {
+  display: flex;
+  text-align: center;
+  flex-wrap: nowrap;
+  padding: 120px 10px;
+}
+
+header .header_conteiner {
+  align-items: center;
+}
+
+header .carousel-indicators li img {
+  border-radius: 10px;
+}
+
+header .carousel-indicators li::before, header .carousel-indicators li::after {
+  display: none;
+}
+
+header .carousel-indicators .active img {
+  border: 4px solid #f90;
+  border-radius: 10px;
+}
+
+header .carousel-indicators li {
+  width: 50px;
+}
+
+header .carousel-indicators li {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+header .header_title h1 {
+  padding-left: 10px;
+  font-size: 33px;
+  font-weight: 700;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+.header_price {
+  order: 3;
+  flex: 1 1 1fr;
+  margin-bottom: 50px;
+  padding: 0 10px;
+}
+
+.header_price h6 {
+  color: #494848;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.header_price .price_without_discount {
+  text-decoration: line-through;
+  color: #6a6a6a;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.header_price .discount_price {
+  color: #363636;
+  border-bottom: 4px solid #f90;
+}
+
+.header_price .discount_valid_until {
+  font-size: 20px;
+  font-weight: 700;
+  color: #363636;
+  margin: 20px 0;
+  padding-bottom: 20px;
+}
+
+.header_price a {
+  color: #fff;
+}
+
+.header_price .button_calculate_the_cost {
+  background-color: #2a7fff;
+  padding: 10px 5px;
+  max-width: 350px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.header_price .button_call_the_measurer {
+  background-color: #197d19;
+  padding: 10px 5px;
+  max-width: 350px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.header_title {
+  margin-top: 10px;
+  order: 1;
+  flex: 1 1 1fr;
+}
+
+.header_img {
+  order: 2;
+  position: relative;
+  flex: 1 1 1fr;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.order_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #197d19;
+  width: 180px;
+  height: 30px;
+  z-index: 9;
+  font-size: 15px;
+  height: 900;
+  color: #fff;
+  right: 10px;
+}
+
+.order_more:hover {
+  text-decoration: none;
+  color: #111;
+}
+/*# sourceMappingURL=style.css.map */
