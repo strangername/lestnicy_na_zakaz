@@ -194,6 +194,8 @@ body {
   font-family: "Roboto Condensed", Arial, sans-serif;
   padding-left: 20px;
   align-items: center;
+	max-width: 1140px;
+	
 }
 
 .conteiner_nav .navbar-brand {
